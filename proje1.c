@@ -9,14 +9,14 @@ int main() {
     setlocale(LC_ALL, "turkish");
     int fiyat = 0, secim, saat, menu, ekstra, giris_hakki = 3;
     char kullanici[10], sifre[10], username[] = "admin", password[] = "1234";
-    FILE *dosya = fopen("kullanici_islemleri.txt", "a");
+    FILE *dosya = fopen("Kullanici_islemleri.txt", "a");
     if (dosya == NULL) {
         printf("Dosya acilamadi.\n");
         return 1;
     }
 
     printf("----------------------- INTERNET KAFE YE HOSGELDINIZ -----------------------\n");
-    printf("\n --------------------------------- MEN‹ ---------------------------------\n");
+    printf("\n --------------------------------- MEN√ú ---------------------------------\n");
     printf("\n ---------- 1 - Giris Yap | Herhangi bir tus - Sistemden cikis ------------\n");
     scanf("%d", &menu);
     if (menu == 1) {
@@ -29,15 +29,15 @@ int main() {
             printf("\n Sifre :");
             scanf("%s", &sifre);
             if (strcmp(kullanici, username) == 0 && strcmp(sifre, password) == 0) {
-                printf("\n Kullanmak Istedigin Bilgisayari SeÁ\n");
-                printf("\n 1 - Y¸ksek Kalite Bilgisayar | 2 - Orta Kalite Bilgisayar | 3 - D¸s¸k Kalite Bilgisayar\n");
+                printf("\n Kullanmak Istedigin Bilgisayari Se√ß\n");
+                printf("\n 1 - Y√ºksek Kalite Bilgisayar | 2 - Orta Kalite Bilgisayar | 3 - D√ºs√ºk Kalite Bilgisayar\n");
                 scanf("%d", &secim);
                 switch (secim) {
                     case 1:
                         fiyat += 60;
-                        fprintf(dosya, "Y¸ksek Kalite Bilgisayar SeÁildi.\n");
+                        fprintf(dosya, "Y√ºksek Kalite Bilgisayar Se√ßildi.\n");
                         printf("Saat basina %d TL odeyeceksin \n", fiyat);
-                        printf("KaÁ saat kullanacaksin (4 SAAT VE ‹ZERI Y‹ZDE 10 INDIRIM) :");
+                        printf("Ka√ß saat kullanacaksin (4 SAAT VE √úZERI Y√úZDE 10 INDIRIM) :");
                         scanf("%d", &saat);
                         if (saat >= 4) {
                             fiyat *= saat;
@@ -55,9 +55,9 @@ int main() {
 
                     case 2:
                         fiyat += 50;
-                        fprintf(dosya, "Orta Kalite Bilgisayar SeÁildi.\n");
-                        printf("Saat basina %d TL ˆdeyeceksin \n", fiyat);
-                        printf("KaÁ saat kullanacaks˝n (4 SAAT VE ‹ZERI Y‹ZDE 10 INDIRIM) :");
+                        fprintf(dosya, "Orta Kalite Bilgisayar Se√ßildi.\n");
+                        printf("Saat basina %d TL √∂deyeceksin \n", fiyat);
+                        printf("Ka√ß saat kullanacaks√Ωn (4 SAAT VE √úZERI Y√úZDE 10 INDIRIM) :");
                         scanf("%d", &saat);
                         if (saat >= 4) {
                             fiyat *= saat;
@@ -75,9 +75,9 @@ int main() {
 
                     case 3:
                         fiyat += 40;
-                        fprintf(dosya, "D¸s¸k Kalite Bilgisayar SeÁildi.\n");
-                        printf("Saat basina %d TL ˆdeyeceksin \n", fiyat);
-                        printf("KaÁ saat kullanacaks˝n (4 SAAT VE ‹ZERI Y‹ZDE 10 INDIRIM) :");
+                        fprintf(dosya, "D√ºs√ºk Kalite Bilgisayar Se√ßildi.\n");
+                        printf("Saat basina %d TL √∂deyeceksin \n", fiyat);
+                        printf("Ka√ß saat kullanacaks√Ωn (4 SAAT VE √úZERI Y√úZDE 10 INDIRIM) :");
                         scanf("%d", &saat);
                         if (saat >= 4) {
                             fiyat *= saat;
@@ -99,7 +99,7 @@ int main() {
                 }
                 break;
             } else
-                printf("\n YANLIS K.ADI/S›FRE \n");
+                printf("\n YANLIS K.ADI/S√ùFRE \n");
 
         }
 
